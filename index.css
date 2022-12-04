@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    /* ### Primary */
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    /* ### Neutral */
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+body{
+    background-color: var(--Light-gray);
+}
+
+.the_main{
+    display: grid;
+    width: 980px;
+    height: auto;
+    margin: 5%  auto ;
+    grid-template-columns: 220px 220px 220px 250px;
+    grid-template-rows: repeat(2,300px);
+    grid-template-areas: "Verified_Graduate_1 Verified_Graduate_1 Verified_Graduate_2 Verified_Graduate_5"
+                         "Verified_Graduate_3 Verified_Graduate_4 Verified_Graduate_4 Verified_Graduate_5";
+
+    gap: 20px; 
+    justify-content: center; 
+    position: relative;                   
+}
+
+@media only screen and (max-width: 990px){
+    .the_main{
+        gap: 5px;
+        grid-template-columns: repeat(4,220px);
+        grid-template-rows: repeat(2,auto);
+    }
+}
+@media only screen and (max-width: 957px){
+    .the_main{
+        grid-template-columns: repeat(4,200px);
+        grid-template-rows: repeat(2,auto);
+        justify-content: center;
+    }
+}
+@media only screen and (max-width: 915px){
+    .the_main{
+        justify-content: left;
+    }
+}
+@media only screen and (max-width: 833px){
+    .the_main{
+        width: auto;
+        grid-template-columns:  minmax(200px,400px);
+        grid-template-rows:  400px 200px 200px 400px 400px;
+        grid-template-areas: "Verified_Graduate_1"
+                             "Verified_Graduate_2"
+                             "Verified_Graduate_3"
+                             "Verified_Graduate_4"
+                             "Verified_Graduate_5";
+        
+        justify-content: center;                     
+    }
+}
+
+
+.Verified_Graduate_1{
+    grid-area: Verified_Graduate_1;
+    background-color: var(--Moderate-violet);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 1px 5px 20px var(--Very-dark-grayish-blue);
+    position: relative;
+
+}
+
+.bg-pattern-quotation{
+    position: absolute;
+    top: 0%;
+    right: 13%;
+}
+
+.container{
+    position: absolute;
+}
+
+.imgeBorder{
+    border-radius: 50%;
+    border: 2px solid var(--Moderate-violet);
+}
+
+.sitPosition{
+    position: relative;
+}
+
+.nameVerified1{
+    position: absolute;
+    top: 4%;
+    left: 11%;
+}
+.nameVerified2{
+    position: absolute;
+    top: 7%;
+    left: 30%;
+}
+.nameVerified3{
+    position: absolute;
+    top: 4%;
+    left: 26%;
+}
+.nameVerified4{
+    position: absolute;
+    top: 0%;
+    left: 13%;
+}
+.nameVerified5{
+    position: absolute;
+    top: 0%;
+    left: 26%;
+}
+
+.Verified_Graduate_2{
+    background-color: var(--Very-dark-grayish-blue);
+    grid-area: Verified_Graduate_2;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 1px 5px 20px var(--Very-dark-grayish-blue);
+    position: relative;
+}
+
+.Verified_Graduate_3{
+    border-radius: 8px;
+    grid-area: Verified_Graduate_3;
+    background-color: var(--White);
+    padding: 1.5rem;
+    box-shadow: 1px 5px 20px var(--Very-dark-grayish-blue);
+    position: relative;
+}
+
+.Verified_Graduate_4{
+    border-radius: 8px;
+    grid-area: Verified_Graduate_4;
+    background-color: var(--Very-dark-blackish-blue);
+    padding: 1.5rem;
+    box-shadow: 1px 5px 20px var(--Very-dark-grayish-blue);
+    position: relative;
+}
+
+.Verified_Graduate_5{
+    background-color: var(--White);
+    grid-area: Verified_Graduate_5;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 1px 5px 20px var(--Very-dark-grayish-blue);
+}
+
+h2{
+    margin-bottom: 4%;
+}
+
+.textwhite{
+    color: hsla(0, 0%, 100%,0.5);
+}
+.textGrey{
+    color: hsl(219, 29%, 14%);
+}
+
+.Colorh2{
+    color: var(--White)
+}
+
+p,.nameVerified p{
+    color: var(--Light-gray);
+    font-size: 1.2rem;
+}
